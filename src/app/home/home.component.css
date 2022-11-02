@@ -1,0 +1,29 @@
+* {
+  color: #000000;
+}
+
+section {
+  background-color: #ffbb7b;
+  border-radius: 0 0 8px 8px;
+  padding: 10px 20px;
+}
+
+p {
+  margin: 0;
+}
+
+/* responsive queries for tightening things up for mobile. */
+
+/* Phone */
+@media screen and (max-width: 576px) {
+  section {
+    padding: 10px 10px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+  section {
+    padding: 10px 30px;
+  }
+}
