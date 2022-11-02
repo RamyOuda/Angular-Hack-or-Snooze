@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { HosApiService } from '../hos-api.service';
+import { Stories } from '../stories';
 
 @Component({
   templateUrl: './home.component.html',
@@ -8,10 +10,9 @@ import { HosApiService } from '../hos-api.service';
 export class HomeComponent implements OnInit {
   constructor(private apiService: HosApiService) {}
 
-  stories$: any;
+  stories$: Observable<Stories[]> = this.apiService.getStories$;
 
   ngOnInit(): void {
-    this.stories$ = this.apiService.getStories();
     console.log(this.stories$);
   }
 }
