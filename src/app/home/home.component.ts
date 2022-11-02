@@ -8,9 +8,10 @@ import { HosApiService } from '../hos-api.service';
 export class HomeComponent implements OnInit {
   constructor(private apiService: HosApiService) {}
 
-  data$: any;
+  stories$: any;
 
   ngOnInit(): void {
-    this.data$ = this.apiService.getStories();
+    this.stories$ = this.apiService.getStories();
+    console.log(this.stories$);
   }
 }
