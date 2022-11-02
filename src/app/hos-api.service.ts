@@ -7,9 +7,9 @@ import { Injectable } from '@angular/core';
 export class HosApiService {
   constructor(private http: HttpClient) {}
 
-  baseUrl = 'https://hack-or-snooze-v3.herokuapp.com/';
+  baseUrl = 'https://hack-or-snooze-v3.herokuapp.com';
 
   getStories() {
-    this.http.get<any>(this.baseUrl + 'stories');
+    this.http.get<any>(this.baseUrl + '/stories');
   }
 }
