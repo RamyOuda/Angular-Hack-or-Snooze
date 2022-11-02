@@ -1,3 +1,46 @@
 * {
   color: #ffffff;
 }
+
+main {
+  margin: 8px 7.5vw;
+}
+
+nav {
+  display: flex;
+  background-color: #ff5e00;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+li {
+  list-style: none;
+}
+
+/* responsive queries for tightening things up for mobile. */
+
+/* Phone */
+@media screen and (max-width: 576px) {
+  main {
+    margin: 0;
+  }
+  ul {
+    padding: 0 5px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+  main {
+    max-width: 900px;
+    margin: 8px auto;
+  }
+  ul {
+    padding: 0 40px;
+  }
+}
