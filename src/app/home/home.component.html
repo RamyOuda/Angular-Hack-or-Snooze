@@ -1,7 +1,9 @@
 <section>
   <p>home works!</p>
 
-  <ol *ngFor="let story of stories$ | async">
+  <div>{{ stories$ | async | json }}</div>
+
+  <!-- <ol *ngFor="let story of stories$ | async">
     <li>{{ story.author }}</li>
-  </ol>
+  </ol> -->
 </section>
