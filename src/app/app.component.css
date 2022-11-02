@@ -8,18 +8,10 @@ main {
 
 nav {
   display: flex;
-  background-color: #ff5e00;
-}
-
-ul {
-  display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 20px;
-}
-
-li {
-  list-style: none;
+  background-color: #ff5e00;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
 }
 
 /* responsive queries for tightening things up for mobile. */
@@ -29,8 +21,8 @@ li {
   main {
     margin: 0;
   }
-  ul {
-    padding: 0 5px;
+  nav {
+    padding: 10px 10px;
   }
 }
 
@@ -40,7 +32,7 @@ li {
     max-width: 900px;
     margin: 8px auto;
   }
-  ul {
-    padding: 0 40px;
+  nav {
+    padding: 10px 30px;
   }
 }
