@@ -5,11 +5,34 @@
 section {
   background-color: #ffbb7b;
   border-radius: 0 0 8px 8px;
-  padding: 10px 20px;
 }
 
-p {
-  margin: 0;
+ol {
+  padding-left: 20px;
+}
+
+li {
+  padding: 4px 0;
+}
+
+.story-title,
+.story-url,
+.story-author {
+  padding: 5px;
+}
+
+.story-title {
+  text-decoration: none;
+}
+
+.story-username {
+  display: block;
+}
+
+.story-url,
+.story-author,
+.story-username {
+  color: #585858;
 }
 
 /* responsive queries for tightening things up for mobile. */
