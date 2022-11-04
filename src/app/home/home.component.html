@@ -1,9 +1,12 @@
 <section>
-  <p>home works!</p>
-
-  <div>{{ stories$ | async | json }}</div>
-
-  <!-- <ol *ngFor="let story of stories$ | async">
-    <li>{{ story.author }}</li>
-  </ol> -->
+  <ol>
+    <li *ngFor="let story of stories$ | async">
+      <a [href]="story.url" target="_blank" class="story-title">
+        {{ story.title }}
+      </a>
+      <small class="story-url">({{ story.url }})</small>
+      <small class="story-author">by {{ story.author }}</small>
+      <small class="story-username">posted by {{ story.username }}</small>
+    </li>
+  </ol>
 </section>
