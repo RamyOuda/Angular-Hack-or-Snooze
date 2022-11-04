@@ -11,11 +11,11 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: HosApiService) {}
 
   stories$: Observable<Stories[]> = this.apiService.getStories$.pipe(
-    map((item: any) => {
-      this.shortUrls = item.stories.map(
+    map((data: any) => {
+      this.shortUrls = data.stories.map(
         (story: any) => new URL(story.url).hostname
       );
-      return item.stories;
+      return data.stories;
     })
   );
 
