@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { HosApiService } from '../hos-api.service';
-import { Stories } from '../stories';
+import { HosApiService } from '../api/hos-api.service';
+import { Stories } from './stories';
 
 @Component({
   templateUrl: './home.component.html',
