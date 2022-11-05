@@ -8,10 +8,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, RouterModule, HttpClientModule, AppRoutingModule, StoreModule.forRoot({}, {})],
   providers: [],
   bootstrap: [AppComponent],
 })
