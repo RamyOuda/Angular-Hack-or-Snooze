@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Stories } from '../home/stories';
+import { Story } from '../home/stories';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class HosApiService {
 
   baseUrl = 'https://hack-or-snooze-v3.herokuapp.com';
 
-  getStories$: Observable<Stories[]> = this.http.get<Stories[]>(
+  getStories$: Observable<Story[]> = this.http.get<Story[]>(
     this.baseUrl + '/stories'
   );
 }
