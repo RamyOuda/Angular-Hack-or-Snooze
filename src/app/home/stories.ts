@@ -1,4 +1,4 @@
-export interface Stories {
+export interface Story {
   author: string;
   createdAt: string;
   storyId: string;
@@ -6,4 +6,9 @@ export interface Stories {
   updatedAt: string;
   url: string;
   username: string;
+  shortUrl?: string;
+}
+
+export interface StoryData {
+  stories: Story[];
 }
