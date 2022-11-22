@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { HosApiService } from '../api/hos-api.service';
 import { Story, StoryData } from './stories';
 
@@ -11,10 +11,11 @@ import { Store } from '@ngrx/store';
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
-  constructor(private store: Store, private apiService: HosApiService) {}
+  constructor(private store: Store<any>, private apiService: HosApiService) {}
 
   stories$: Observable<Story[]> = this.apiService.getStories$.pipe(
-    map((data: any) =>
+    tap((data: any) => console.log(data)),
+    map((data: StoryData) =>
       data.stories.map((story: Story) => ({
         ...story,
         shortUrl: new URL(story.url).hostname,
